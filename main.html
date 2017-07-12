@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			 .gonggao {
+			 	  height: 100%;
+			 }
+			 .mui-bar-popover {
+				width: 10%;
+			}
+		</style>
+		<script>
+//			if(window.WebSocket){
+//				  var ws =new WebSocket('ws://192.168.2.192:8089/websocket/maoyl');
+//				  ws.onopen = function(event){
+//				  	console.log(event);
+//				  	ws.send("ddddd");
+//				  };
+////				  ws.on
+//				  ws.onmessage=function(event){
+//				  	 console.log(event.data);
+//				  }
+//				  
+//			}
+		</script>
+	</head>
+
+	<body>
+		<div id="main">
+			
+		
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item"  v-bind:class="{'mui-active': true}" v-on:tap="tab(0)">
+				 <span class="mui-icon mui-icon-home "></span>
+			     <span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item"    v-on:tap="tab(1)">			 
+				 <span class="mui-icon mui-icon-list" ><span class="mui-badge mui-badge-red " id ="dsnum" v-if="noappnum>0">{{noappnum}}</span></span>
+			     <span class="mui-tab-label">待审批</span>
+			</a>
+			<a class="mui-tab-item"   v-on:tap="tab(2)">
+				 <span class="mui-icon mui-icon-bars" ></span>
+			     <span class="mui-tab-label">已审批</span></a>			
+		</nav>
+		</div>
+		<div class="mui-content"></div>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+		<script type="text/javascript" src="js/vue.js" ></script>
+		<script type="text/javascript" src="js/vue-mui.js" ></script>
+		<script type="text/javascript" src="js/Ajax.js" ></script>
+		<script type="text/javascript" src="js/appjs/main.js" ></script>
+		<script type="text/javascript" src="js/push.js" ></script>
+	</body>
+
+</html>

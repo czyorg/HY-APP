@@ -1,0 +1,20 @@
+ .mui-content-padded{
+			 	 background-color: white;
+			 	 
+			 }
+			 .mui-card{
+			 	  /*height: 30px;*/
+			 }
+			 .mui-row-board{
+			 	border-bottom:1px solid gainsboro;
+			 	height: 40px;
+			 	 line-height:40px;   
+			 	
+			 }
+			 .mui-bt{
+			 	padding-left: 10px;
+			 }
+			 
+			 .mui-number-color{
+			 	 color: red;
+			 }

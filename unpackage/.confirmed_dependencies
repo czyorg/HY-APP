@@ -1,0 +1,218 @@
+{
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/appjs/index.js",
+      "images/1.pic.jpg",
+      "images/APPýuýG.bmp",
+      "images/APPýuýG.bmp",
+      "images/APPýuýG.png",
+      "images/APPýuýG.png",
+      "images/backgroud.png"
+    ],
+    "refer": [
+      "login.html",
+      "main.html"
+    ],
+    "priority": 0
+  },
+  "login.html": {
+    "resources": [
+      "js/appjs/login.js",
+      "js/mui.enterfocus.js",
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/login.png"
+    ],
+    "refer": [
+      "main.html"
+    ]
+  },
+  "main.html": {
+    "resources": [
+      "js/Ajax.js",
+      "js/appjs/main.js",
+      "js/vue.js",
+      "js/vue-mui.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "new.html",
+      "js/jquery-1.10.2.min.js",
+      "js/push.js"
+    ],
+    "refer": [
+      "new.html",
+      "approvelist.html",
+      "approvelist2.html",
+      "pullrefresh_with_tab.html"
+    ]
+  },
+  "approvelist1.html": {
+    "resources": [
+      "js/appjs/approvelist1.js",
+      "js/jquery-1.10.2.min.js",
+      "js/Ajax.js",
+      "js/vue.js",
+      "js/vue-mui.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/jquery-1.10.2.js"
+    ],
+    "refer": []
+  },
+  "new.html": {
+    "resources": [
+      "js/appjs/new.js",
+      "css/mui.min.css",
+      "images/icon.jpeg",
+      "js/Ajax.js",
+      "js/vue.js",
+      "js/vue-mui.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "images/timg.jpg",
+      "js/jquery-1.10.2.min.js"
+    ],
+    "refer": [
+      "setting.html"
+    ]
+  },
+  "approvelist2.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/Ajax.js",
+      "js/appjs/approvelist1.js",
+      "js/vue.js",
+      "js/vue-mui.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/jquery-1.10.2.min.js",
+      "js/jquery-1.10.2.js",
+      "js/mui.pullToRefresh.js",
+      "js/mui.pullToRefresh.material.js",
+      "js/vue.min.js",
+      "js/appjs/approvelist2.js"
+    ],
+    "refer": [
+      "approve_bx.html",
+      "approve_yf.html",
+      "approve.html",
+      "approve_hr.html"
+    ]
+  },
+  "approvelist.html": {
+    "resources": [
+      "js/jquery-1.10.2.js",
+      "js/appjs/approvelist1.js",
+      "js/jquery-1.10.2.min.js",
+      "js/Ajax.js",
+      "js/vue.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/mui.pullToRefresh.js",
+      "js/mui.pullToRefresh.material.js"
+    ],
+    "refer": [
+      "approve.html",
+      "approve_bx.html",
+      "approve_yf.html",
+      "approve_hr.html"
+    ]
+  },
+  "approve.html": {
+    "resources": [
+      "js/appjs/approve.js",
+      "js/Ajax.js",
+      "js/jquery-1.10.2.js",
+      "js/vue.js",
+      "js/vue-mui.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/jquery-1.10.2.min.js",
+      "js/fj.js",
+      "css/my.css"
+    ],
+    "refer": [
+      "fjimage.html"
+    ]
+  },
+  "fjimage.html": {
+    "resources": [
+      "js/mui.zoom.js",
+      "js/mui.previewimage.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "approve_bx.html": {
+    "resources": [
+      "js/appjs/approve.js",
+      "js/fj.js",
+      "css/mui.min.css",
+      "css/my.css",
+      "js/Ajax.js",
+      "js/jquery-1.10.2.js",
+      "js/vue.js",
+      "js/vue-mui.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "js/jquery-1.10.2.min.js"
+    ],
+    "refer": [
+      "fjimage.html"
+    ]
+  },
+  "setting.html": {
+    "resources": [
+      "css/feedback.css",
+      "js/appjs/setting.js",
+      "img/logo.png",
+      "js/feedback.js",
+      "js/mui.view.js",
+      "css/mui.min.css",
+      "js/vue.js",
+      "js/mui.min.js",
+      "js/Ajax.js",
+      "js/jquery-1.10.2.min.js"
+    ],
+    "refer": [
+      "index.html",
+      "login.html"
+    ]
+  },
+  "approve_yf.html": {
+    "resources": [
+      "js/appjs/approve.js",
+      "js/fj.js",
+      "js/Ajax.js",
+      "js/jquery-1.10.2.js",
+      "js/vue.js",
+      "js/vue-mui.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/jquery-1.10.2.min.js",
+      "css/my.css"
+    ],
+    "refer": [
+      "fjimage.html"
+    ]
+  },
+  "approve_hr.html": {
+    "resources": [
+      "js/appjs/approve.js",
+      "css/mui.min.css",
+      "js/fj.js"
+    ],
+    "refer": []
+  }
+}

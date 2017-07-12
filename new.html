@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			/*.mui-header{
+				 height: 100px;
+			}
+			.mui-bar{
+				background-color: white;
+			}*/
+			.mui-new-icon{
+				/*padding-top: 10px;
+				height: 90px;*/
+			}
+			.mui-header-text{
+				/*margin: 20px auto;*/
+				color: aquamarine
+			}
+			.mui-content{
+				padding-top: 50px;
+				/*background: white;*/
+				/*height: 30%;*/
+			}
+		</style>
+	</head>
+
+	<body id="news">
+		   <header class=" mui-header mui-bar ">
+			<!--<a href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>-->
+			<!--<div class="mui-row">
+			<div class="mui-col-xs-3">
+				<img src="images/icon.jpeg" class="mui-new-icon"/>
+			</div>
+			<div class=" mui-header-text mui-col-xs-9 mui-text-right">
+			<h4 class="mui-icon mui-action-menu  ">{{uname}}!您好</h4>
+			</div>
+			<div class="mui-header-text mui-col-xs-4 mui-text-left" >-->
+				<!--<iframe id="fancybox-frame" name="fancybox-frame1497599600586" frameborder="0" scrolling="no" hspace="0"  src="http://i.tianqi.com/index.php?c=code&a=getcode&id=34&h=25&w=280"></iframe>-->
+			<!--<iframe id="fancybox-frame" name="fancybox-frame1497600065426" frameborder="0" scrolling="no" hspace="0"  src="http://i.tianqi.com/index.php?c=code&a=getcode&id=17&h=50&w=120"></iframe>-->
+			<!--<iframe id="fancybox-frame" name="fancybox-frame1497601699665" frameborder="0" scrolling="no" hspace="0"  src="http://i.tianqi.com/index.php?c=code&a=getcode&id=35&h=55&w=200"></iframe>-->
+			<!--<iframe id="fancybox-frame" name="fancybox-frame1497601748939" frameborder="0" scrolling="no" hspace="0"  src="http://i.tianqi.com/index.php?c=code&a=getcode&id=8&h=80&w=230"></iframe>-->
+			<!--<iframe id="fancybox-frame" name="fancybox-frame1497601827540" frameborder="0" scrolling="no" hspace="0"  src="http://i.tianqi.com/index.php?c=code&a=getcode&id=7&h=90&w=225"></iframe>-->
+			<!--</div>
+			</div>-->
+			
+			<h1 class="mui-title">新闻公告</h1>
+            <span class="mui-icon mui-icon-gear mui-pull-right" v-on:tap="setting"></span>
+		  </header>
+		  <!--<div class=" mui-control mui-text-center">		  
+
+		          <div class="aaa mui-media-body" id="weather">
+		          	
+		          </div>
+
+		   </div>-->
+		   <div>
+		   	
+		   </div>
+		  <div class=" mui-content" id="news">
+		    <!--<div class="mui-text-center" onclick="">
+		  	<iframe id="fancybox-frame" name="fancybox-frame1497601827540" frameborder="0" scrolling="no" hspace="0"  src="http://i.tianqi.com/index.php?c=code&a=getcode&id=7&h=90&w=225"></iframe>
+		  	</div>-->
+		  	<!--<div class="mui-text-center" >
+		  	<iframe height="200px" width="90%" frameborder="0" scrolling="yes" hspace="0"  src="http://3g.163.com/touch/all?dataversion=A&version=v_standard"></iframe>
+		  	</div>-->
+		  <div class=" mui-card" v-for="item in newlist">
+				<div class="mui-card-header mui-card-media" style="height:20vw;background-image:url(images/timg.jpg)"></div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<p>{{item.dmakedate}}</p>
+						<p> {{item.content}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+		<script type="text/javascript" src="js/vue.js" ></script>
+		<script type="text/javascript" src="js/vue-mui.js" ></script>
+		<script type="text/javascript" src="js/Ajax.js" ></script>
+		<script type="text/javascript" src="js/appjs/new.js" ></script>
+	</body>
+
+</html>

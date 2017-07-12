@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style>
+			
+			.mui-scroll-wrapper{
+				top:120px;
+			}
+			
+			.flex-container {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-flow: row wrap;
+				justify-content: space-between;
+				/*text-align: center;*/
+				padding-top:10px;
+			}
+            .mui-btn{
+            	  /*background: rgba(0,0,240,0.9);*/
+            /*  rgba(74,170,242,0.9);*/
+            	  color: white;
+            }
+		
+		</style>
+	</head>
+
+	<body id ="applist">
+		<header class="mui-bar mui-bar-nav"  >
+		<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+	   <div id="head" onclick="returnhead()">
+	   	
+	  
+	   <h1 class="mui-title">已审批列表</h1>
+	      <a  id="query" href="#topPopover" class=" mui-icon mui-icon-search mui-pull-right" ></a>
+	       </div>
+	    </header>
+		   <div class="mui-content " >
+		   	     <!--<div class="mui-slider ">-->
+				   <div class="mui-slider " style="padding: 10px 10px;">
+						<div id="segmentedControl" class="mui-segmented-control">
+							<a class="mui-control-item mui-active" href="#item1" v-on:tap="tabchange(0)">全部</a>
+							<a class="mui-control-item" href="#item2" v-on:tap="tabchange(1)">合同管理</a>
+							<a class="mui-control-item" href="#item3" v-on:tap="tabchange(2)">应付管理</a>
+							<a class="mui-control-item" href="#item3" v-on:tap="tabchange(3)">报销管理</a>
+							<a class="mui-control-item" href="#item3" v-on:tap="tabchange(4)">薪酬管理</a>
+						</div>
+					</div>
+			
+			       <div id="topPopover" class="mui-popover" style="height: 200px; background-color: white;">
+						 <div class="mui-popover-arrow"></div>
+						 <!--<div class="mui-scroll-wrapper">-->
+							<div class="mui-card-content mui-text-center">
+								<!--<div class="mui-row" >-->
+				    	     
+				    	      	
+				    	      
+						         	<div class=" mui-content-padded   mui-search mui-input-row" >
+										<input id="search_sender" type="search" class="mui-input-clear" placeholder="制单人">
+									</div>
+									<div class="mui-content-padded   mui-search mui-input-row">
+										<input id="search_dept" type="search" class="mui-input-clear" placeholder="单据号">
+									</div>
+									
+									
+							   <!--</div>-->
+							   <div class="mui-content-padded">
+											<button id='search_btn' class="mui-btn mui-button-row mui-btn-primary" onclick="search()">查询</button>				
+							   </div>
+				            </div>
+						<!--</div>-->
+			
+				</div>
+			
+			      <div class="mui-slider-group  ">
+			         	<div id="pullrefresh" class=" mui-scroll-wrapper"  >
+								<div   class="mui-scroll">
+									   <div class="mui-card" v-for="item in applist">
+									   	    <div class="mui-row mui-content-padded">
+												<div class="mui-col-xs-9 mui-col-sm-8">
+													<div class="mui-row mui-row-board ">
+								              	  	   <div class="mui-col-xs-3 mui-col-sm-5 ">
+								              	  	   	 公司:
+								              	  	   </div>
+								              	  	    <div class="mui-col-xs-9 mui-col-sm-7 ">
+								              	  	   	 {{item.dwmc}}
+								              	  	   </div>
+							              	        </div>
+													<div class="mui-row mui-row-board ">
+								              	  	   <div class="mui-col-xs-5 mui-col-sm-5 ">
+								              	  	   	 待审批单据号:
+								              	  	   </div>
+								              	  	    <div class="mui-col-xs-7 mui-col-sm-5 ">
+								              	  	   	 {{item.billno}}
+								              	  	   </div>
+							              	        </div>
+							              	        <div class="mui-row mui-row-board ">
+								              	  	   <div class="mui-col-xs-3 mui-col-sm-5 ">
+								              	  	   	 单据类型:
+								              	  	   </div>
+								              	  	    <div class="mui-col-xs-9 mui-col-sm-5 ">
+								              	  	   	 {{item.djlxmc}}
+								              	  	   </div>
+							              	        </div>
+							              	         <div class="mui-row mui-row-board ">
+								              	  	   <div class="mui-col-xs-3 mui-col-sm-5 ">
+								              	  	   	 制单人:
+								              	  	   </div>
+								              	  	    <div class="mui-col-xs-9 mui-col-sm-5 ">
+								              	  	   	 {{item.psnname}}
+								              	  	   </div>
+							              	        </div>
+							              	         <div class="mui-row mui-row-board " v-if='item.total>0'>
+								              	  	   <div class="mui-col-xs-3 mui-col-sm-5 ">
+								              	  	   	 审批金额:
+								              	  	   </div>
+								              	  	    <div class="mui-col-xs-9 mui-col-sm-5 ">
+								              	  	   	 {{item.total}}
+								              	  	   </div>
+							              	        </div>
+													
+												</div>
+												<div class=" mui-col-xs-3  mui-col-sm-4  mui-text-right mui-card-content-inner mui-bottom " style="margin: 15px auto;">
+													<button class="mui-bg-positive mui-btn mui-btn-blue" id={{$index}} onclick="approve({{$index}})">查看</button>
+												</div>
+											</div>
+									   </div>
+									   
+								</div>
+						</div>
+			      </div>
+			     <!--</div>-->
+			  </div>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/mui.pullToRefresh.js" ></script>
+		<script type="text/javascript" src="js/mui.pullToRefresh.material.js" ></script>
+		<script type="text/javascript" src="js/vue.js" ></script>
+		<!--<script type="text/javascript" src="js/vue-mui.js" ></script>-->
+		<script type="text/javascript" src="js/jquery-1.10.2.js" ></script>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+		<script type="text/javascript" src="js/Ajax.js" ></script>
+		<script type="text/javascript" src="js/appjs/approvelist2.js" ></script>
+	</body>
+
+</html>
